@@ -17,7 +17,7 @@ class Movie{
         $this->duration = $_duration;
         $this->price = $_price;
 
-        if($this->movieDirector == 'National Geographic') {
+        if($this->year < 2000) {
             $this->discount = $this->price * 0.8;
         }
 

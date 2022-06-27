@@ -7,15 +7,18 @@ class Movie{
     public $duration;
     public $price;
 
-    public function __construct($_title, $_movieDirector, $_year, $_duration){
+    public $discount = 0;
+
+    public function __construct($_title, $_movieDirector, $_year, $_duration, $_price){
 
         $this->title = $_title;
         $this->movieDirector = $_movieDirector;
         $this->year = $_year;
         $this->duration = $_duration;
+        $this->price = $_price;
 
         if($this->movieDirector == 'National Geographic') {
-            $this->price = 'Free';
+            $this->discount = $this->price * 0.8;
         }
 
 
